@@ -62,7 +62,8 @@ static SemaphoreHandle_t xStringMutex;
 /*
  * See the serial.h header file.
  */
-portBASE_TYPE xSerialPortInit( unsigned long ulWantedBaud,
+portBASE_TYPE 
+xSerialPortInit( unsigned long ulWantedBaud,
                                unsigned portBASE_TYPE uxQueueLength )
 {
     portBASE_TYPE xReturn = pdTRUE;

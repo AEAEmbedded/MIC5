@@ -29,7 +29,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -125,14 +125,13 @@ void vTask2( void *pvParameters )
 {
     const char *pcTaskName = "Task 2 is running\r\n";
     volatile uint32_t ul; /* volatile to ensure ul is not optimized away. */
-
     /* As per most tasks, this task is implemented in an infinite loop. */
     for( ;; )
     {
         /* Print out the name of this task. */
         //vPrintString( pcTaskName );
     	vSerialPutString(pcTaskName);
-
+        rgb_blue_on(1);
         /* Delay for a period. */
         for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
         {
