@@ -131,7 +131,6 @@ void vTask2( void *pvParameters )
         /* Print out the name of this task. */
         //vPrintString( pcTaskName );
     	vSerialPutString(pcTaskName);
-        rgb_blue_on(1);
         /* Delay for a period. */
         for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
         {
