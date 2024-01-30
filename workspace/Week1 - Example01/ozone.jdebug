@@ -4,8 +4,8 @@
 *                         www.segger.com                             *
 **********************************************************************
 
-File          : /mnt/3c8641a4-f089-425f-b228-e740a9f7575e/MIC5/workspace/Week1 - Example01/ozone.jdebug
-Created       : 30 Jan 2024 21:39
+File          : /mnt/3c8641a4-f089-425f-b228-e740a9f7575e/MIC5/workspace/Week2 - Example01/ozone.jdebug
+Created       : 30 Jan 2024 22:49
 Ozone Version : V3.30b
 */
 
@@ -22,18 +22,18 @@ void OnProjectLoad (void) {
   //
   // Dialog-generated settings
   //
-  Project.AddPathSubstitute ("/mnt/3c8641a4-f089-425f-b228-e740a9f7575e/MIC5/workspace/Week1 - Example01", "$(ProjectDir)");
-  Project.AddPathSubstitute ("/mnt/3c8641a4-f089-425f-b228-e740a9f7575e/mic5/workspace/week1 - example01", "$(ProjectDir)");
+  Project.AddPathSubstitute (".", "$(ProjectDir)");
   Project.SetDevice ("MKL25Z128xxx4");
   Project.SetHostIF ("USB", "");
   Project.SetTargetIF ("SWD");
   Project.SetTIFSpeed ("4 MHz");
   Project.AddSvdFile ("$(InstallDir)/Config/CPU/Cortex-M0.svd");
-  Project.AddSvdFile ("/mnt/3c8641a4-f089-425f-b228-e740a9f7575e/MIC5/workspace/Week1 - Example01/startup/MKL25Z4.xml");
+  Project.AddSvdFile ("$(ProjectDir)/startup/MKL25Z4.xml");
   //
   // User settings
   //
-  File.Open ("$(ProjectDir)/build/cmake_example01.elf");
+  Project.SetOSPlugin ("FreeRTOSPlugin_ARM");
+  File.Open ("$(ProjectDir)/build/cmake_week_1_example01.elf");
 }
 
 /*********************************************************************

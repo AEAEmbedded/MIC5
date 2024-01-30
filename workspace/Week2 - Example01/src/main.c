@@ -29,7 +29,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -121,7 +121,7 @@ void vTaskFunction( void *pvParameters )
 		// Print the changed heap size. Notice that allocating memory
 		// requires a little over the requested 64 bytes!
 
-		sprintf(str, "%s | Free heap before %zu and after %zu in bytes\r\n",
+		sprintf(str, "%s | Free heap before %d and after %d in bytes\r\n",
 			pcTaskName, freeHeapSizeBefore, freeHeapSizeAfter);
 		vSerialPutString(str);
 

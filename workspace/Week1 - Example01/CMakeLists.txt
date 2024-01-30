@@ -52,8 +52,8 @@ target_include_directories(serial PUBLIC serial/)
 # Serial library depends on FreeRTOS
 target_link_libraries(serial FreeRTOS)
 
-add_executable(cmake_example01.elf src/main.c)
+add_executable(cmake_week_1_example01.elf src/main.c)
 
 # Link the executable with all the libraries
-target_link_libraries(cmake_example01.elf PUBLIC CMSIS FreeRTOS rgb serial)
+target_link_libraries(cmake_week_1_example01.elf PUBLIC CMSIS FreeRTOS rgb serial)
 
