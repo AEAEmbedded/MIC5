@@ -32,7 +32,7 @@
 #ifndef TCRT5000_H
 #define TCRT5000_H
 
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include "FreeRTOS.h"
 #include "semphr.h"
 

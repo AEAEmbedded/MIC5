@@ -64,7 +64,6 @@ void tim_init(void)
 
 void TPM1_IRQHandler(void)
 {
-    static uint32_t cnt = 0;
 
     NVIC_ClearPendingIRQ(TPM1_IRQn);
 

@@ -40,7 +40,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include "i2c1.h"
 
 /*!
@@ -68,7 +68,7 @@ void i2c1_init(void)
     // MUL[1:0] : The MULT bits define the multiplier factor mul.
     // ICR[5:0] : Prescales the bus clock for bit rate selection.
     //
-    // I2C baud rate = bus speed (Hz)/(mul × SCL divider)
+    // I2C baud rate = bus speed (Hz)/(mul ï¿½ SCL divider)
     //        375000 =     24MHz     /( 1  *    64)
     I2C1->F = (I2C_F_MULT(0) | I2C_F_ICR(0x12));   
     
@@ -117,13 +117,13 @@ bool i2c1_write_cmd(const uint8_t address, const uint8_t cmd[], const uint32_t n
     I2C1->S |= I2C_S_IICIF_MASK;
                       
     // Datasheet 8.1.5.2: A control byte mainly consists of Co and D/C# bits 
-    //                    following by six “0” ‘s
-    // Bit 7 Co:   If the Co bit is set as logic “0”, the transmission of the 
+    //                    following by six ï¿½0ï¿½ ï¿½s
+    // Bit 7 Co:   If the Co bit is set as logic ï¿½0ï¿½, the transmission of the 
     //             following information will contain data bytes only.
     // Bit 6 D/C#: The D/C# bit determines the next data byte is acted as a 
-    //             command or a data. If the D/C# bit is set to logic “0”, it 
+    //             command or a data. If the D/C# bit is set to logic ï¿½0ï¿½, it 
     //             defines the following data byte as a command. If the D/C# bit
-    //             is set to logic “1”, it defines the following data byte as a 
+    //             is set to logic ï¿½1ï¿½, it defines the following data byte as a 
     //             data which will be stored at the GDDRAM.
     //             The GDDRAM column address pointer will be increased by one 
     //             automatically after each data write.    
@@ -210,13 +210,13 @@ bool i2c1_write_data(const uint8_t address, const uint8_t data[], const uint32_t
     I2C1->S |= I2C_S_IICIF_MASK;
                       
     // Datasheet 8.1.5.2: A control byte mainly consists of Co and D/C# bits 
-    //                    following by six “0” ‘s
-    // Bit 7 Co:   If the Co bit is set as logic “0”, the transmission of the 
+    //                    following by six ï¿½0ï¿½ ï¿½s
+    // Bit 7 Co:   If the Co bit is set as logic ï¿½0ï¿½, the transmission of the 
     //             following information will contain data bytes only.
     // Bit 6 D/C#: The D/C# bit determines the next data byte is acted as a 
-    //             command or a data. If the D/C# bit is set to logic “0”, it 
+    //             command or a data. If the D/C# bit is set to logic ï¿½0ï¿½, it 
     //             defines the following data byte as a command. If the D/C# bit
-    //             is set to logic “1”, it defines the following data byte as a 
+    //             is set to logic ï¿½1ï¿½, it defines the following data byte as a 
     //             data which will be stored at the GDDRAM.
     //             The GDDRAM column address pointer will be increased by one 
     //             automatically after each data write.    

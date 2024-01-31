@@ -29,7 +29,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -123,7 +123,7 @@ static void vADCTask(void *parameters)
         if(xResult == pdPASS)
         {
             // Notification received
-            sprintf(str, "[vADCTask] % 5u\r\n", ulADCResult);
+            sprintf(str, "[vADCTask] % 5ld\r\n", ulADCResult);
             vSerialPutString(str);
 
             // Process the ADC result

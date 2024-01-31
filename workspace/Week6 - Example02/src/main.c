@@ -29,7 +29,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -106,7 +106,7 @@ static void vTask(void *parameters)
     const TickType_t xMaxDelay = pdMS_TO_TICKS(5000UL);
     const EventBits_t uxAllSyncBits = xEventBits[0] | xEventBits[1] | xEventBits[2];
 
-    sprintf(str, "[% 7d - Task %d     ] Created\r\n", xTaskGetTickCount(), n);
+    sprintf(str, "[% 7ld - Task %ld     ] Created\r\n", xTaskGetTickCount(), n);
     vSerialPutString(str);
 
     // As per most tasks, this task is implemented in an infinite loop.
@@ -121,7 +121,7 @@ static void vTask(void *parameters)
 
         // Print out a message to show this task has reached its synchronization
         // point.
-        sprintf(str, "[% 7d - Task %d     ] Reached sync point\r\n", xTaskGetTickCount(), n);
+        sprintf(str, "[% 7ld - Task %ld     ] Reached sync point\r\n", xTaskGetTickCount(), n);
         vSerialPutString(str);
 
         // Wait for all the tasks to have reached their respective synchronization
@@ -132,7 +132,7 @@ static void vTask(void *parameters)
         // point. As an indefinite delay was used the following line will only be
         // executed after all the tasks reached their respective synchronization
         // points.
-        sprintf(str, "[% 7d - Task %d     ] Exited sync point\r\n", xTaskGetTickCount(), n);
+        sprintf(str, "[% 7ld - Task %ld     ] Exited sync point\r\n", xTaskGetTickCount(), n);
         vSerialPutString(str);
     }
 }

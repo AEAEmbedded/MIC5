@@ -32,7 +32,7 @@
 #ifndef SWITCHES_H
 #define SWITCHES_H
 
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 
 /// The number of keys available on the shield

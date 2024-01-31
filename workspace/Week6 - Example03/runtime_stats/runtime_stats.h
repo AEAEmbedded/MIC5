@@ -32,7 +32,7 @@
 #ifndef RUNTIME_STATS_H
 #define RUNTIME_STATS_H
 
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 
 extern volatile uint32_t ulHighFrequencyTicks;
 

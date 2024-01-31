@@ -29,7 +29,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -112,7 +112,7 @@ static void vTask(void *parameters)
     TickType_t xLastWakeTime = xTaskGetTickCount();
     TickType_t xDelayMs = xDelaysMs[n-1];
 
-    sprintf(str, "[% 7d - Task %d     ] Created\r\n", xLastWakeTime, n);
+    sprintf(str, "[% 7ld - Task %ld     ] Created\r\n", xLastWakeTime, n);
     vSerialPutString(str);
 
     // As per most tasks, this task is implemented in an infinite loop.
@@ -122,7 +122,7 @@ static void vTask(void *parameters)
         vTaskDelayUntil(&xLastWakeTime, xDelayMs);
 
         // Print info
-        sprintf(str, "[% 7d - Task %d     ] Set bit %d\r\n", xLastWakeTime, n, (n-1));
+        sprintf(str, "[% 7ld - Task %ld     ] Set bit %ld\r\n", xLastWakeTime, n, (n-1));
         vSerialPutString(str);
 
         // Set the bit in the event group
@@ -151,7 +151,7 @@ static void vEventReader(void *parameters)
 
 
 
-    sprintf(str, "[% 7d - EventReader] Created\r\n", xTaskGetTickCount());
+    sprintf(str, "[% 7ld - EventReader] Created\r\n", xTaskGetTickCount());
     vSerialPutString(str);
 
     // As per most tasks, this task is implemented in an infinite loop.
@@ -165,7 +165,7 @@ static void vEventReader(void *parameters)
                                                portMAX_DELAY);
 
         // Prepare the string
-        sprintf(str, "[% 7d - EventReader] EventBits: 000..0", xTaskGetTickCount());
+        sprintf(str, "[% 7ld - EventReader] EventBits: 000..0", xTaskGetTickCount());
 
         // Add the value of the last three bits
         strcat(str, ((xEventGroupValue & xEventBits[2]) != 0) ? "1" : "0");

@@ -32,7 +32,7 @@
 #ifndef RGB_H
 #define RGB_H
 
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 
 void rgb_init(void);

@@ -29,7 +29,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -97,7 +97,7 @@ static void prvBacklightTimerCallback( TimerHandle_t xTimer )
 
     /* Print the time at which the backlight was turned off. */
     char str[64];
-    sprintf(str, "Timer expired, turning backlight OFF at time\t\t% 6d\r\n", xTimeNow);
+    sprintf(str, "Timer expired, turning backlight OFF at time\t\t% 6ld\r\n", xTimeNow);
     vSerialPutString(str);
 }
 
@@ -139,7 +139,7 @@ static void vKeyHitTask( void *pvParameters )
                 queue, not the period! */
                 xTimerStart( xBacklightTimer, pdMS_TO_TICKS( 10 ) );
 
-                sprintf(str, "Key pressed, turning backlight ON at time\t\t% 6d\r\n", xTimeNow);
+                sprintf(str, "Key pressed, turning backlight ON at time\t\t% 6ld\r\n", xTimeNow);
                 vSerialPutString(str);
             }
             else
@@ -151,7 +151,7 @@ static void vKeyHitTask( void *pvParameters )
 
                 /* The backlight was already on, so print a message to say the timer is about to
                 be reset and the time at which it was reset. */
-                sprintf(str, "Key pressed, resetting software timer at time\t\t% 6d\r\n", xTimeNow);
+                sprintf(str, "Key pressed, resetting software timer at time\t\t% 6ld\r\n", xTimeNow);
                 vSerialPutString(str);
             }
         }

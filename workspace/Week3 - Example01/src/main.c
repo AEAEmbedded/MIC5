@@ -29,7 +29,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -186,7 +186,7 @@ static void vReceiverTask(void *pvParameters)
             /* Data was successfully received from the queue, print out the received
             value. */
             char str[16];
-            sprintf(str, "Received = % 4d\r\n", lReceivedValue);
+            sprintf(str, "Received = % 4ld\r\n", lReceivedValue);
             vSerialPutString(str);
         }
         else

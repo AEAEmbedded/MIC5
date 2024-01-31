@@ -31,7 +31,7 @@ add_definitions(-DCPU_MKL25Z128VLK4
                 -fmessage-length=0 
                 -fno-builtin 
                 -ffunction-sections 
-                -fdata-sections 
+                -fdata-sections
                 -fmerge-constants
                 -mapcs)
 

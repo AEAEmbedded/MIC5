@@ -32,7 +32,7 @@
 #ifndef TIM_H
 #define TIM_H
 
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 
 /*----------------------------------------------------------------------------*/
 // Shared variables

@@ -43,7 +43,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include "i2c0.h"
 
 static void delay_us(uint32_t d)

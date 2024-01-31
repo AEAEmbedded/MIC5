@@ -29,7 +29,7 @@
  *            OTHER DEALINGS IN THE SOFTWARE.
  *
  *****************************************************************************/
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -145,7 +145,7 @@ static void prvOneShotTimerCallback( TimerHandle_t xTimer )
 
     /* Output a string to show the time at which the callback was executed. */
     char str[64];
-    sprintf(str, "One-shot timer callback executing % 6d\r\n", xTimeNow);
+    sprintf(str, "One-shot timer callback executing % 6ld\r\n", xTimeNow);
     vSerialPutString(str);
 
     /* File scope variable. */
@@ -163,7 +163,7 @@ static void prvAutoReloadTimerCallback( TimerHandle_t xTimer )
 
     /* Output a string to show the time at which the callback was executed. */
     char str[64];
-    sprintf(str, "Auto-reload timer callback executing % 6d\r\n", xTimeNow);
+    sprintf(str, "Auto-reload timer callback executing % 6ld\r\n", xTimeNow);
     vSerialPutString(str);
 
     ulCallCount++;

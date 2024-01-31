@@ -1,4 +1,4 @@
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 #include <math.h>
 
 #include "FreeRTOS.h"

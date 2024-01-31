@@ -32,7 +32,7 @@
 #ifndef LEDS_H
 #define LEDS_H
 
-#include <MKL25Z4.H>
+#include <MKL25Z4.h>
 
 // Function prototypes
 void led_init(void);

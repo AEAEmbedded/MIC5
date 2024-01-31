@@ -99,7 +99,8 @@
 #include <stdint.h>
 #include "MKL25Z4.h"
 
-
+void _sbrk(int incr) {
+}
 
 /* ----------------------------------------------------------------------------
    -- Core clock
