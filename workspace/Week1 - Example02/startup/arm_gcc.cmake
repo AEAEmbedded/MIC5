@@ -37,6 +37,7 @@ add_definitions(-DCPU_MKL25Z128VLK4
                 -DFREEDOM
                 -DDEBUG
                 -D__USE_CMSIS
+                -D__NEWLIB__
                 -DCLOCK_SETUP=1
                 -MMD
                 -MP
@@ -55,7 +56,6 @@ add_link_options(-mthumb
                 -mcpu=${MCPU}
                 -specs=nano.specs 
                 -Wl,--gc-sections
-                --specs=nosys.specs
                 -Wl,--print-memory-usage
                 -lm
                 -Wl,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
