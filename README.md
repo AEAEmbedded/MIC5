@@ -122,6 +122,6 @@ It will probably ask you to always configure the project, select **No** (if yes,
 
 ## License
 
-The material seems to have a MIT license attached. Though the material is not owned by me. To avoid conflicts with the original authors, this repository is licensed GPL-3 though this might be subject to change :)
+The material seems to have a MIT license attached. Though the material is not owned by me. This repository is licensed Apache 2 though this might be subject to change :)
 
 Though it is good to note that the changes made to the material are MIT licensed, such as all the CMake files.
